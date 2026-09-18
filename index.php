@@ -29,6 +29,5 @@ if ($_SERVER["REQUEST_METHOD"] === "post" ) {
     echo $username;
     echo $email;
     echo $password;
-
 }
 ?>
