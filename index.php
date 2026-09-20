@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
+    <form method="POST">
         Username :
         <input type="text" name="user">
         <br>
@@ -22,10 +22,10 @@
 </html>
 
 <?php 
-if ($_SERVER["REQUEST_METHOD"] === "post" ) {
-    $username = $_POST("user");
-    $email = $_POST("email");
-    $password = $_POST("pass");
+if ($_SERVER["REQUEST_METHOD"] === "POST" ) {
+    $username = $_POST["user"];
+    $email = $_POST["email"];
+    $password = $_POST["pass"];
     echo $username;
     echo $email;
     echo $password;
