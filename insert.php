@@ -6,17 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="POST">
         Id:
         <input type="text" name="id" id="">
+        <br>
         Name:
         <input type="text" name="name" id="">
+        <br>
         Email:
         <input type="email" name="email" id="">
+        <br>
         Age:
         <input type="number" name="age" id="">
+        <br>
         Address:
         <input type="text" name="address" id="">
+        <br>
         <button type="submit">Submit</button>
     </form>
 </body>
@@ -31,7 +36,7 @@
         $age = $_POST["age"];
         $address = $_POST["address"];
 
-        $sql = $conn -> prepare("insert into emp values (?,?,?,?,?);")
+        $sql = $conn -> prepare("insert into emp values (?,?,?,?,?)");
         $sql->bind_param("issis",$id,$name,$email,$age,$address);
         if($sql->execute()){
             echo "Inserted";
