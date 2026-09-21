@@ -19,7 +19,6 @@
     include 'dbconnect.php';
     if($_SERVER["REQUEST_METHOD"]==="POST"){
         $id = $_POST["id"];
-
         $sql = $conn -> prepare("delete from emp where id = ?");
         $sql->bind_param("i",$id);
         if($sql->execute()){

@@ -28,7 +28,6 @@
             <td><?php echo $row["age"]; ?></td>
             <td><?php echo $row["address"]; ?></td>
         </tr>
-
         <?php } ?>
     </table>
 </body>

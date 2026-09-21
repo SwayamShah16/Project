@@ -23,7 +23,6 @@
     if($_SERVER["REQUEST_METHOD"]==="POST"){
         $id = $_POST["id"];
         $address = $_POST["address"];
-
         $sql = $conn -> prepare("update emp set address=? where id=?");
         $sql->bind_param("si",$address,$id);
         if($sql->execute()){

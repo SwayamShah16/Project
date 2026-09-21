@@ -31,7 +31,6 @@
         $pass = $_POST["pass"];
         $cpass = $_POST["cpass"];
 
-
         if(empty($name)){
             echo '<script>alert("Name is not valid");</script>';
         }
