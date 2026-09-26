@@ -1,5 +1,6 @@
 <?php
     include 'db.php';
+    session_start();
 
     if($_SERVER["REQUEST_METHOD"]==="POST"){
         $name = $_POST["name"];
@@ -12,7 +13,7 @@
         $sql -> fetch();
 
         if(password_verify($pass,$password)){
-            $_SESSION['name'] = $name;
+            $_SESSION["name"] = $name;
             header("Location:home.php");
          }
         else{
